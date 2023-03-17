@@ -44,7 +44,7 @@ function startOver() {
     gamePattern = [];
     userClickedPattern = [];
     flag = false; //ponemos la bandera en false para que se pueda volver a jugar
-    $(document).one("keypress", function () {
+    $(document).one("keypress touchstart", function () {
         if (!flag) {
             nextSequence();
             flag = true; //Con esto funciona solo una vez al presionar teclado.
@@ -84,7 +84,7 @@ function checkAnswer() {
 var level = 0;
 var flag = false; //ponemos una bandera que cambia a true cuando se llama la fucnion. 
 
-$(document).one("keypress", function () {
+$(document).one("keypress touchstart", function () {
     if (!flag) {
         nextSequence();
         flag = true; //Con esto funciona solo una vez al presionar teclado.
